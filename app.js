@@ -16,7 +16,7 @@ const corsOptions = {
     "http://localhost:3000",
     "http://localhost:3001",
     "https://divineft-steel.vercel.app",
-    //"https://www.demeviwinnersavings.com",
+    "https://www.divineconceptinvestments.com",
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
