@@ -120,11 +120,11 @@ class TransactionController {
 
       const shortName = customer.name?.split(" ").slice(0, 4).join(" ");
 
-      const message = `Acct: ${customer.accountNumber.replace("WIN-", "")}.
+      const message = `Acct: ${customer.accountNumber.replace("D&C-", "")}.
 NGN${Number(depositAmount).toLocaleString("en-NG")}.CR
-DESC:${shortName} to winnerSave
+DESC:${shortName} to D&CSavings
 Avail Bal: NGN${Number(updatedBalance).toLocaleString("en-NG")}.
-Thank you for banking with winnerSave.`;
+Thank you for banking with D&CSavings.`;
 
       console.log("===== DEPOSIT REQUEST =====");
       console.log(req.body);
@@ -267,11 +267,11 @@ Thank you for banking with winnerSave.`;
       await session.commitTransaction();
       const shortName = customer.name?.split(" ").slice(0, 4).join(" ");
 
-      const message = `acct: ${customer.accountNumber.replace("WIN-", "")}
+      const message = `acct: ${customer.accountNumber.replace("D&C-", "")}
       NGN${Number(amount).toLocaleString("en-NG")}.DR
-      DESC:winnerSave to ${shortName}
+      DESC:D&CSavings to ${shortName}
       Avail Bal: NGN${Number(updatedBalance).toLocaleString("en-NG")}.
-      Thank you for banking with winnerSave.`;
+      Thank you for banking with D&CSavings.`;
 
       try {
         await sendSMS(customer.customersPhoneNo, message);

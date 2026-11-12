@@ -1,4 +1,4 @@
-function generateUniqueAccountNumber(prefix = "WIN-") {
+function generateUniqueAccountNumber(prefix = "D&C-") {
   // Generate a random number (you can customize the range)
   const randomNumber = Math.floor(Math.random() * 10000000000);
 
